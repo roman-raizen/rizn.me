@@ -5,8 +5,10 @@ import Contact from '@/scenes/Home/components/Contact'
 const ShowHomeScene = () => {
   return(
     <>
-      <div className="max-w-6xl mx-auto">
-        <Hello />
+      <div className="flex justify-center flex-col  lg:min-h-[80vh]">
+        <div className="max-w-6xl mx-auto">
+          <Hello />
+        </div>
       </div>
       <div>
       <div className="max-w-6xl mx-auto">
