@@ -22,10 +22,16 @@ const Hello = () => {
                 Very passionate about web technologies and learning new skills.
                 Recently into <Highlight>Web3</Highlight> and <Highlight>Blockchain</Highlight> technologies.
               </div>
-              <div className="flex justify-center mt-10">
-                <InstagramIcon className="w-10 h-10 mx-4 fill-slate-600" />
-                <GithubIcon className="w-10 h-10 mx-4 fill-slate-600" />
-                <LinkedInIcon className="w-10 h-10 mx-4 fill-slate-600" />
+              <div className="flex justify-center mt-10 space-x-8">
+                <a target="_blank" href="https://github.com/roman-raizen" className="transition-all hover:scale-110 hover:rotate-6">
+                  <GithubIcon className="w-10 h-10 fill-slate-600" />
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/roman-raizen-59bb99192/" className="transition-all hover:scale-110 hover:rotate-6">
+                  <LinkedInIcon className="w-10 h-10 fill-slate-600" />
+                </a>
+                <a target="_blank" href="https://www.instagram.com/raizen.me/" className="transition-all hover:scale-110 hover:rotate-6">
+                  <InstagramIcon className="w-10 h-10 fill-slate-600" />
+                </a>
               </div>
             </div>
           </div>
