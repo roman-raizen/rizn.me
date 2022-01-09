@@ -30,13 +30,15 @@ const Timeline = ({ children }) => {
 
 const Chapter = ({title, children}) => {
   return (
-    <div className="p-5 text-center bg-white">
-      <h2 className="text-xl">
-        <Highlight>{title}</Highlight>
-      </h2>
-      <p className="my-2">
-        {children}
-      </p>
+    <div className="flex justify-center my-12">
+      <div className="max-w-2xl p-5 text-center bg-white rounded-lg">
+        <h2 className="text-xl">
+          <Highlight>{title}</Highlight>
+        </h2>
+        <p className="my-2">
+          {children}
+        </p>
+      </div>
     </div>
   )
 }
