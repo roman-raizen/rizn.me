@@ -1,13 +1,26 @@
 import Section from "@/components/Section"
 import Highlight from '@/components/Highlight'
 import Badge from '@/components/Badge'
+import { motion } from 'framer-motion'
 
 const TimelineItem = ({ children, title, skills }) => {
   const badges = skills.split(',').map(s => s.trim())
 
   return (
-    <div className="relative lg:w-1/2 lg:even:self-end lg:-mt-32 lg:first:mt-0 before:content-[' '] lg:before:visible before:invisible lg:after:visible after:invisible before:border-slate-300 before:border-t-2 before:absolute before:top-1/2 before:z-10 before:-translate-y-1/2 before:right-0 even:before:left-0 even:after:left-4 before:w-4 after:content-[' '] after:bg-slate-300 after:w-2 after:h-2 after:absolute after:rounded-full after:z-10 after:right-4 after:top-1/2 after:-translate-y-1/2">
-      <div className="m-5 p-5 text-center rounded-lg bg-slate-50 border-[1rem] border-white relative">
+    <div
+      className="relative lg:w-1/2 lg:even:self-end lg:-mt-32 lg:first:mt-0 before:content-[' '] lg:before:visible before:invisible lg:after:visible after:invisible before:border-slate-300 before:border-t-2 before:absolute before:top-1/2 before:z-10 before:-translate-y-1/2 before:right-0 even:before:left-0 even:after:left-4 before:w-4 after:content-[' '] after:bg-slate-300 after:w-2 after:h-2 after:absolute after:rounded-full after:z-10 after:right-4 after:top-1/2 after:-translate-y-1/2"
+    >
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: '100%' }
+        }}
+        className="m-5 p-5 text-center rounded-lg bg-slate-50 border-[1rem] border-white relative"
+      >
         <h3 className="font-bold">{title}</h3>
         <p>{children}</p>
         <div className="flex flex-wrap justify-center mt-3">
@@ -15,7 +28,7 @@ const TimelineItem = ({ children, title, skills }) => {
             <Badge key={index}>{badge}</Badge>
           )}
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }
