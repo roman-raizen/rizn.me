@@ -10,8 +10,8 @@ const Hello = () => {
   return (
     <Section>
       <Blobs className="lg:w-1/2">
-        <div className="flex flex-col-reverse content-center p-10 bg-white rounded-lg lg:flex-row">
-          <div className="flex flex-col justify-center mt-10 mr-10 text-center lg:w-1/2">
+        <div className="flex flex-col-reverse content-center p-10 bg-white rounded-lg lg:space-x-10 lg:flex-row">
+          <div className="flex flex-col justify-center mt-10 text-center lg:w-1/2">
             <div>
               <div className="text">Hello, I'm</div>
               <h1 className="my-3 text-4xl font-bold">Roman Raizen</h1>
